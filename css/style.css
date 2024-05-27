@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+    font-family: "Poppins", sans-serif;
+}
+.counter-container {
+  padding: 4rem 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  justify-items: center;
+  gap: 2rem;
+}
+.counter-container .counter {
+  text-align: center;
+}
+.counter-container .counter .text-dark {
+  font-size: 6.4rem;
+  font-weight: 600;
+}
+@media (max-width: 824px) {
+.counter-container .counter .text-dark {
+    font-size: 4.5rem;
+  }
+}
+@media (max-width: 627px) {
+  #feature-two .counter-container .counter .text-dark {
+    font-size: 4rem;
+  }
+}
+.counter-container .counter span {
+  color: #7b8087;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
