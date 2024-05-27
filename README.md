@@ -1,6 +1,6 @@
-# Skills_Sections
+# Skills_Sections ⭐⭐⭐⭐☆
 
-![Banner](image/cap_filter.PNG)
+![Banner](image/cap-counter.PNG)
 <p align="center" style="color: white;">
     <img src="https://profile-counter.glitch.me/Juanes200122/count.svg" />
 </p>
@@ -14,18 +14,18 @@
       <img src="https://img.shields.io/badge/-@jeacsi.official_022-purple?style=flat&logo=instagram&logoColor=white&link=https://www.instagram.com/jeacsi.official_022?igsh=MWJ6MHRwcnhoZXVxbQ==" alt="Instagram Badge">
     </a>
 </p>
-<p>He desarrollado un filtro de productos utilizando HTML, CSS, JavaScript y la librería Mixer.js, que se destaca por su capacidad de filtrar y ordenar productos de manera dinámica y eficiente. Para lograr este efecto, he implementado una técnica que permite la clasificación y filtrado en tiempo real, brindando una experiencia de usuario fluida y altamente interactiva. El uso de Mixer.js ha facilitado la creación de transiciones suaves y personalizables entre los diferentes estados de filtrado, ofreciendo una experiencia visual atractiva y sin interrupciones.</p>
+<p>Se a desarrollado una animación de contadores utilizando JavaScript puro, que se ejecuta al cargar la página. Esta animación permite incrementar los valores de los contadores de forma gradual hasta alcanzar un objetivo predefinido, ofreciendo una experiencia visual atractiva y dinámica.</p>
 
 <p>Visualizar trabajo en 
-    <a href="https://codepen.io/Juan-Esteban-Ar-valo/pen/QWRGLNE" target="_blank">
+    <a href="https://codepen.io/Juan-Esteban-Ar-valo/pen/rNgMrOP" target="_blank">
         <img src="https://img.shields.io/badge/-CodePen-000000?style=flat&logo=codepen" alt="CodePen">
     </a>
 </p>
 
 
 ```bash
-    git clone https://github.com/Juanes200122/Product_Filter.git
-    cd Product_Filter
+    git clone https://github.com/Juanes200122/Skills_Sections.git
+    cd Skills_Sections
 ```
 <div align="right">
     
@@ -34,16 +34,34 @@
 
 </div>
 
-## <b> Funcionalidad de filtrado</b>
-<img align="right" src="image/product_filter.gif" width="400"/>
+## <b> Funcionalidad</b>
+<img align="right" src="image/cap-countainer.gif" width="400"/>
 
 ```JS
-    document.addEventListener('DOMContentLoaded', function() {
-    var mixer = mixitup('.product-filter-items');
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter h3');
+    const speed = 1200;
+
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const increment = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 1);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        updateCount();
     });
+});
 ```
 
-</br></br></br></br></br></br>
+</br>
 
 ## <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"><b> Skills</b>
   - 💻 &nbsp;
